@@ -29,9 +29,11 @@ public class Colecciones1 {
 	}
 	//metodo que divide por 3 los ultimos 5 valores del array
 	public void divideUltimos(){
-		for (int i = array.length-5; i < array.length; i++) {
-			array [i] = array[i]/3;
-		}
+		if (array.length >= 5){
+			for (int i = array.length-5; i < array.length; i++) {
+				array [i] = array[i]/3;
+			}
+		} else System.out.println("No se puede ejecutar este metodo");
 	}
 	//metodo que calcula el valor mas peque�o del array
 	public void valorMin(){
@@ -39,7 +41,7 @@ public class Colecciones1 {
 		for (int i = 0; i < array.length; i++) {
 			if(valMin > array[i]) valMin = array[i];		
 		}
-		System.out.println("Valor mas peque�o : "+valMin);
+		System.out.println("Valor mas pequeño : "+valMin);
 	}
 	//metodo que muestra los valores en 3 filas de 4 columnas y 5 espacios de separacion
 	public void mostrarValores(){
