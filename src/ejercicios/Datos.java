@@ -1,13 +1,22 @@
 package ejercicios;
-
+/**
+ * 
+ * @author Bernabe Fernandez Ogayar
+ * @version 1.0
+ */
 public class Datos {
-	//atrib
 	private double [] datos;
-	//constructor
+	/**
+	 * 
+	 * @param datos Un array de tipo double
+	 */
 	public Datos(double[] datos) {
 		this.datos = datos;
 	}
-	//metodo que devuelve el valor medio
+	/**
+	 * 
+	 * @return devuelve la media de todos los valores del array
+	 */
 	public double valorMedio () {
 		double suma = 0;
 		for (int i = 0; i < datos.length; i++) {
@@ -15,7 +24,10 @@ public class Datos {
 		}
 		return suma/datos.length;
 	}
-	//metodo que devuelve la desviacion tipica
+	/**
+	 * 
+	 * @return devuelve la desviacion tipica de los valores del array
+	 */
 	public double desviacionTipica (){
 		double suma = 0;
 		double dt = 0;
@@ -25,7 +37,10 @@ public class Datos {
 		dt = Math.sqrt(suma/datos.length);
 		return dt;
 	}
-	//metodo que devuelve el numero de datos por debajo de la media
+	/**
+	 * 
+	 * @return devuelve el numero de valores por debajo de la media
+	 */
 	public int valoresBajoMedia(){
 		int contador = 0;
 			for (int i = 0; i < datos.length; i++) {
@@ -33,7 +48,10 @@ public class Datos {
 			}
 		return contador;
 	}
-	//metodo que devuelve el valor mas pequeño del array
+	/**
+	 * 
+	 * @return devuelve el valor mas pequeño del array
+	 */
 	public double valorMinimo(){
 		double valor = datos[0];
 		for (int i = 0; i < datos.length; i++) {
@@ -41,7 +59,10 @@ public class Datos {
 		}	
 		return valor;
 	}
-	//metodo que devuelve el valor mas grande del array
+	/**
+	 * 
+	 * @return devuelve el valor mas grande del array
+	 */
 	public double valorMaximo(){
 		double valor = datos[0];
 		for (int i = 0; i < datos.length; i++) {
