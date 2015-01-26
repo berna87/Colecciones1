@@ -21,7 +21,7 @@ public class Producto implements Comparable{
 	@Override
 	public String toString() {
 		return "Producto [id=" + id + ", nombreProducto=" + nombreProducto
-				+ ", precioProducto=" + precioProducto + "]";
+				+ ", precioProducto=" + precioProducto + "€]\n";
 	}
 	@Override
 	public int compareTo(Object o) {

@@ -15,13 +15,16 @@ public class Tienda {
 		return this.p;
 	}
 	public void eliminarProducto(Producto p){
-		this.p.remove(p);
+		if(this.p.contains(p))this.p.remove(p);
 	}
 	public Producto productoMasCaro(){
 		double precio = p.get(0).getPrecioProducto();
 		Producto productoMasCaro = p.get(0);
 		for (int i = 0; i < p.size(); i++) {
-			if(precio > p.get(i).getPrecioProducto()) productoMasCaro = p.get(i);
+			if(precio < p.get(i).getPrecioProducto()){
+					productoMasCaro = p.get(i);
+					precio = p.get(i).getPrecioProducto();
+			}
 		}
 		return productoMasCaro;
 	}
@@ -29,7 +32,10 @@ public class Tienda {
 		double precio = p.get(0).getPrecioProducto();
 		Producto productoMasBarato = p.get(0);
 		for (int i = 0; i < p.size(); i++) {
-			if(precio < p.get(i).getPrecioProducto()) productoMasBarato = p.get(i);
+			if(precio > p.get(i).getPrecioProducto()) {
+				productoMasBarato = p.get(i);
+				precio = p.get(i).getPrecioProducto();
+			}
 		}
 		return productoMasBarato;
 	}
